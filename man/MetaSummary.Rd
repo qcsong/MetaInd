@@ -14,7 +14,7 @@ MetaSummary(x, correct_Rxx = TRUE, correct_Ryy = TRUE, correct_RR = TRUE,
 
 \item{correct_Ryy}{If TRUE, reliability of criterion (dependent variable) will be corrected}
 
-\item{correct_RR}{If TRUE, range restriction will be corrected (see Schmidt, Hunter, Le, 2000). Note that reliability of dependent variable will be corrected during the process.}
+\item{correct_RR}{If TRUE, range restriction will be corrected (see Hunter, Schmidt, & Le, 2006). Note that reliability of dependent variable will be corrected during the process.}
 
 \item{direct}{If TRUE, direct range restriction will be corrected. If FALSE, indirect range restriction will be corrected.}
 }

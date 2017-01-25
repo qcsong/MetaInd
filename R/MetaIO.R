@@ -11,7 +11,7 @@
 #' @param x Meta-analytic data
 #' @param correct_Rxx If TRUE, reliability of predictor (indepedent variable) will be corrected
 #' @param correct_Ryy If TRUE, reliability of criterion (dependent variable) will be corrected
-#' @param correct_RR If TRUE, range restriction will be corrected (see Schmidt, Hunter, Le, 2000). Note that reliability of dependent variable will be corrected during the process.
+#' @param correct_RR If TRUE, range restriction will be corrected (see Hunter, Schmidt, & Le, 2006). Note that reliability of dependent variable will be corrected during the process.
 #' @param direct If TRUE, direct range restriction will be corrected. If FALSE, indirect range restriction will be corrected.
 #' @import psychometric
 #' @examples
@@ -124,6 +124,8 @@ cRyy <- function (x)
 #' @param x Meta-analytic data
 #' @param correct_Rxx If TRUE, reliability of predictor (indepedent variable) will be corrected
 #' @param direct If TRUE, direct range restriction will be corrected. If FALSE, indirect range restriction will be corrected.
+#' @references
+#' Hunter, J. E., Schmidt, F. L., & Le, H. (2006). Implications of direct and indirect range restriction for meta-analysis methods and findings. Journal of Applied Psychology, 91(3), 594.
 #' @return Meta-analytic data corrected for range restriction (and dependent variable)
 #' @export
 cRRn <- function(x, correct_Rxx = TRUE, direct = TRUE)
