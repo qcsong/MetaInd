@@ -2,7 +2,7 @@
 
 export(CredInt)
 export(MetaSummary)
-export(cRR)
+export(cRRn)
 export(cRxx)
 export(cRyy)
 export(pvse2)

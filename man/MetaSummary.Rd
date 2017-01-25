@@ -24,4 +24,11 @@ Summary table for meta-analysis results (artifacts corrected indiviudally)
 \description{
 Summary table for meta-analysis results (artifacts corrected individually)
 }
+\examples{
+data(ABHt32)
+MetaSummary(ABHt32)
+}
+\references{
+Schmidt, F. L., & Hunter, J. E. (2014). Methods of meta-analysis: Correcting error and bias in research findings. Sage publications.
+}
 

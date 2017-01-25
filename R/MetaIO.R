@@ -14,6 +14,11 @@
 #' @param correct_RR If TRUE, range restriction will be corrected (see Schmidt, Hunter, Le, 2000). Note that reliability of dependent variable will be corrected during the process.
 #' @param direct If TRUE, direct range restriction will be corrected. If FALSE, indirect range restriction will be corrected.
 #' @import psychometric
+#' @examples
+#' data(ABHt32)
+#' MetaSummary(ABHt32)
+#' @references
+#' Schmidt, F. L., & Hunter, J. E. (2014). Methods of meta-analysis: Correcting error and bias in research findings. Sage publications.
 #' @return Summary table for meta-analysis results (artifacts corrected indiviudally)
 #' @export
 MetaSummary = function (x, correct_Rxx = TRUE, correct_Ryy = TRUE, correct_RR = TRUE, direct = TRUE)
@@ -33,7 +38,7 @@ MetaSummary = function (x, correct_Rxx = TRUE, correct_Ryy = TRUE, correct_RR = 
   x_c = x
 
   if(correct_RR==TRUE){ # Ryy: dependent variable reliability is corrected
-    x_c = cRR(x_c, direct = direct, correct_Rxx = correct_Rxx)
+    x_c = cRRn(x_c, direct = direct, correct_Rxx = correct_Rxx)
   }else{
     if(correct_Rxx==TRUE){x_c = cRxx(x_c)}
     if(correct_Ryy==TRUE){x_c = cRyy(x_c)}
@@ -106,9 +111,9 @@ cRyy <- function (x)
   return(out)
 }
 
-##### cRR #####
+##### cRRn #####
 
-#' cRR
+#' cRRn
 #'
 #' Conduct correction for range restriction for each effect size (i.e., each row)
 #' based on: Hunter, Schmidt & Le (2000)
@@ -121,7 +126,7 @@ cRyy <- function (x)
 #' @param direct If TRUE, direct range restriction will be corrected. If FALSE, indirect range restriction will be corrected.
 #' @return Meta-analytic data corrected for range restriction (and dependent variable)
 #' @export
-cRR <- function(x, correct_Rxx = TRUE, direct = TRUE)
+cRRn <- function(x, correct_Rxx = TRUE, direct = TRUE)
 {
   # direct range restriction
   if(direct == TRUE){
