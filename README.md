@@ -3,7 +3,8 @@
 Conducts Hunter & Schmidt Meta-Analysis with Individual Artifact Correction <br \>
 Developer: Chelsea Song <br \>
 Contact: qianqisong@gmail.com <br \>
-Last Update: 01/24/2017 
+Last Update: 01/24/2017 <br \>
+*Current version is beta version, please forward any questions or suggestions to qianqisong@gmail.com. Thanks!*
 
 ## Objective ##
 
@@ -32,20 +33,20 @@ The current R packages provides meta-analytic results using Hunter and Schmidt m
 Summary table of meta-analytic results, consisting of:
 * *n* - sample size  
 * *k* - number of studies
-* rbar - sample size-weighted average effect size
-* Var.rbar - variance of sample size-weighted average effect size estimate
-* VarSE.rbar - variance due to sampling error of average effect size estimate
-* PerVarExp.rbar - percent variance explained by sampling error for average effect size estimate
-* LCL95.rbar - lower boundary of 95% confidence interval of average effect size estimate
-* UCL95.rbar - upper boundary of 95% confidence interval of average effect size estimate
-* rho - corrected meta-analytic effect size estimate
-* Var.rho - variance of corrected meta-analytic effect size estimate
-* VarSE.rho - variance due to sampling error of corrected effect size estimate
-* PerVarExp.rho - percent variance expained by sampling error for corrected effect size estimate
-* LCL95.rho - lower boundary of 95% confidence interval of corrected effect size estimate
-* UCL95.rho - upper boundary of 95% confidence interval of average effect size  
-* LCV80 - lower boundary of 80% credibility interval 
-* UCV80 - upper boundary of 80% credibility interval
+* *rbar* - sample size-weighted average effect size
+* *Var.rbar* - variance of sample size-weighted average effect size estimate
+* *VarSE.rbar* - variance due to sampling error of average effect size estimate
+* *PerVarExp.rbar* - percent variance explained by sampling error for average effect size estimate
+* *LCL95.rbar* - lower boundary of 95% confidence interval of average effect size estimate
+* *UCL95.rbar* - upper boundary of 95% confidence interval of average effect size estimate
+* *rho* - corrected meta-analytic effect size estimate
+* *Var.rho* - variance of corrected meta-analytic effect size estimate
+* *VarSE.rho* - variance due to sampling error of corrected effect size estimate
+* *PerVarExp.rho* - percent variance expained by sampling error for corrected effect size estimate
+* *LCL95.rho* - lower boundary of 95% confidence interval of corrected effect size estimate
+* *UCL95.rho* - upper boundary of 95% confidence interval of average effect size  
+* *LCV80* - lower boundary of 80% credibility interval 
+* *UCV80* - upper boundary of 80% credibility interval
 
 #### Note ####
 
