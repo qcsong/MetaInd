@@ -30,8 +30,8 @@ The current R packages provides meta-analytic results using Hunter and Schmidt m
 ## Output Description ##
 
 Summary table of meta-analytic results, consisting of:
-* n - sample size  
-* k - number of studies
+* *n* - sample size  
+* *k* - number of studies
 * rbar - sample size-weighted average effect size
 * Var.rbar - variance of sample size-weighted average effect size estimate
 * VarSE.rbar - variance due to sampling error of average effect size estimate
