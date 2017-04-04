@@ -48,10 +48,10 @@ MetaSummary = function (x, correct_Rxx = TRUE, correct_Ryy = TRUE, correct_RR = 
   # rho_lCIhet <- psychometric::CIrb(x_c, LEVEL = .95, homogenous = F)[1]
   # rho_uCIhet <- psychometric::CIrb(x_c, LEVEL = .95, homogenous = F)[2]
   rho_ve <- psychometric::varr(x_c) # Ave(ve) in Schmidt & Hunter 2014 (p.149)
-  stde <- sqrt(ve)
+  rho_stde <- sqrt(rho_ve)
   zs <- -qnorm((1 - level)/2)
-  rho_lCIhet <- rho_rb - zs * stde
-  rho_uCIhet <- rho_rb + zs * stde
+  rho_lCIhet <- rho_rb - zs * rho_stde
+  rho_uCIhet <- rho_rb + zs * rho_stde
   rho_lCV <- psychometric::CredIntRho(x_c, LEVEL = .80, homogenous = F)[1]
   rho_uCV <- psychometric::CredIntRho(x_c, LEVEL = .80, homogenous = F)[2]
   # lCV <- CredInt(x_c, level = 0.8)[[1]]
