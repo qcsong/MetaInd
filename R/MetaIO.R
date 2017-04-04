@@ -49,6 +49,7 @@ MetaSummary = function (x, correct_Rxx = TRUE, correct_Ryy = TRUE, correct_RR = 
   # rho_uCIhet <- psychometric::CIrb(x_c, LEVEL = .95, homogenous = F)[2]
   rho_ve <- psychometric::varr(x_c) # Ave(ve) in Schmidt & Hunter 2014 (p.149)
   rho_stde <- sqrt(rho_ve)
+  level = 0.95
   zs <- -qnorm((1 - level)/2)
   rho_lCIhet <- rho_rb - zs * rho_stde
   rho_uCIhet <- rho_rb + zs * rho_stde
