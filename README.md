@@ -1,9 +1,9 @@
 # MetaIO 
 
-Conducts Hunter & Schmidt Meta-Analysis with Individual Artifact Correction <br \>
-Developer: Chelsea Song <br \>
-Contact: qianqisong@gmail.com <br \>
-Last Update: 01/24/2017 <br \>
+Conducts Hunter & Schmidt Meta-Analysis with Individual Artifact Correction <br \> \\
+Developer: Chelsea Song <br \> \\
+Contact: qianqisong@gmail.com <br \> \\
+Last Update: 01/24/2017 <br \> \\
 *Current version is beta version, please forward any questions or suggestions to qianqisong@gmail.com. Thanks!*
 
 ## Objective ##
