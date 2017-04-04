@@ -46,10 +46,10 @@ MetaSummary = function (x, correct_Rxx = TRUE, correct_Ryy = TRUE, correct_RR = 
   # Ave_ve <- psychometric::varr(x_c) # Ave(ve) in Schmidt & Hunter 2014 (p.149)
   rho_vr <- psychometric::vare(x_c) # Var(rho) in Schmidt & Hunter 2014 (p.149)
   # rho_pv <- pvse2(x_c)[1] # percent of variance due to sampling error
-  # rho_lCIhet <- psychometric::CIrb(x_c, LEVEL = .95, homogenous = F)[1]
-  # rho_uCIhet <- psychometric::CIrb(x_c, LEVEL = .95, homogenous = F)[2]
-  lCV <- CredInt(x_c, level = 0.8)[[1]]
-  uCV <- CredInt(x_c, level = 0.8)[[2]]
+  rho_lCIhet <- psychometric::CIrb(x_c, LEVEL = .95, homogenous = F)[1]
+  rho_uCIhet <- psychometric::CIrb(x_c, LEVEL = .95, homogenous = F)[2]
+  # lCV <- CredInt(x_c, level = 0.8)[[1]]
+  # uCV <- CredInt(x_c, level = 0.8)[[2]]
   
   out <- data.frame(n = n, k = k, 
                     rbar = x_rb, Var.rbar = x_vr, VarSE.rbar = x_ve, PerVarExp.rbar = x_pv, 
@@ -57,7 +57,8 @@ MetaSummary = function (x, correct_Rxx = TRUE, correct_Ryy = TRUE, correct_RR = 
                     rho = rho_rb, Var.rho = rho_vr, 
                     # PerVarExp.rho = rho_pv, 
                     # LCI95.rho = rho_lCIhet, UCL95.rho = rho_uCIhet,
-                    LCV80 = lCV, UCV80 =uCV)
+                    # LCV80 = lCV, UCV80 =uCV,
+                    LCV80 = rho_lCIhet, UCV80 = rho_uCIhet)
   return(out)
 }
 
