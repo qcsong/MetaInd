@@ -24,7 +24,3 @@ Options
 2) "correct_Rxx = TRUE": correct/not correct for independent variable reliability
 Note that Ryy: dependent variable reliability is corrected
 }
-\references{
-Hunter, J. E., Schmidt, F. L., & Le, H. (2006). Implications of direct and indirect range restriction for meta-analysis methods and findings. Journal of Applied Psychology, 91(3), 594.
-}
-

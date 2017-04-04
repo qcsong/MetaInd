@@ -15,4 +15,3 @@ Percent variance explained by sampling error
 \description{
 Percent variance explained by sampling error
 }
-

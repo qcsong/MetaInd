@@ -17,4 +17,3 @@ Upper and lower boundaries of the credibility interval
 \description{
 Estimates credibility interval
 }
-

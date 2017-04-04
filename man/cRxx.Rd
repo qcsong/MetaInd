@@ -15,4 +15,3 @@ Meta-analytic data corrected for independent variable reliability
 \description{
 Description: Conduct reliability correction for predictor (independent variable) for each effect size (i.e., each row)
 }
-

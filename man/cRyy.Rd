@@ -15,4 +15,3 @@ Meta-analytic data corrected for dependent variable reliability
 \description{
 Description: Conduct reliability correction for criterion (dependent variable) for each effect size (i.e., each row)
 }
-
