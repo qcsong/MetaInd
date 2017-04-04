@@ -51,7 +51,7 @@ MetaSummary = function (x, correct_Rxx = TRUE, correct_Ryy = TRUE, correct_RR = 
 
   # estimate confidence interval
   # Schmidt & Hunter (2015) p. 230
-  rho_stdr <- ((rho_rb/rbar)*(sqrt(x_vr)))/(sqrt(k))
+  rho_stdr <- ((rho_rb/x_rb)*(sqrt(x_vr)))/(sqrt(k))
   level = 0.95
   zs <- -qnorm((1 - level)/2)
   rho_lCI <- rho_rb - zs * rho_stdr
