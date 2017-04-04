@@ -1,11 +1,9 @@
 Package: MetaIO
 Type: Package
-Title: Meta-Analysis Package for Industrial-Organizational Psychology (artifacts
-    corrected individually)
+Title: Meta-Analysis Package for Industrial-Organizational Psychology (artifacts corrected individually)
 Version: 0.1.0
 Authors@R: person("Q. Chelsea", "Song", email = "qianqisong@gmail.com", role = c("aut", "cre"))
 Description: Based on Schmidt and Hunter method (Schmidt & Hunter, 2014).
 Depends: R (>= 3.0.1)
 License: MIT
 LazyData: TRUE
-RoxygenNote: 5.0.1
