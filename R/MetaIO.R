@@ -50,13 +50,12 @@ MetaSummary = function (x, correct_Rxx = TRUE, correct_Ryy = TRUE, correct_RR = 
   rho_ve <- psychometric::varr(x_c) # Ave(ve) in Schmidt & Hunter 2014 (p.149)
 
   # estimate confidence interval
-  rho_stdr <- sqrt(rho_vr)
+  # Schmidt & Hunter (2015) p. 230
+  rho_stdr <- ((rho_rb/rbar)*(sqrt(x_vr)))/(sqrt(k))
   level = 0.95
   zs <- -qnorm((1 - level)/2)
-  rho_lCIhet <- rho_rb - zs * rho_stdr
-  rho_uCIhet <- rho_rb + zs * rho_stdr
-  # rho_lCV <- CredInt(x_c, level = 0.8)[[1]]
-  # rho_uCV <- CredInt(x_c, level = 0.8)[[2]]
+  rho_lCI <- rho_rb - zs * rho_stdr
+  rho_uCI <- rho_rb + zs * rho_stdr
   
   # estimate credibility interval
   rho_stdr <- sqrt(rho_vr)
@@ -70,7 +69,7 @@ MetaSummary = function (x, correct_Rxx = TRUE, correct_Ryy = TRUE, correct_RR = 
                     LCL95.rbar = x_lCIhet, UCL95.rbar = x_uCIhet, 
                     rho = rho_rb, Var.rho = rho_vr, 
                     # PerVarExp.rho = rho_pv, 
-                    LCI95.rho = rho_lCIhet, UCL95.rho = rho_uCIhet,
+                    LCI95.rho = rho_lCI, UCL95.rho = rho_uCI,
                     LCV80 = rho_lCV, UCV80 = rho_uCV)
   return(out)
 }
