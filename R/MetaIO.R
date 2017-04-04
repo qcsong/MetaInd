@@ -59,11 +59,11 @@ MetaSummary = function (x, correct_Rxx = TRUE, correct_Ryy = TRUE, correct_RR = 
   # rho_uCV <- CredInt(x_c, level = 0.8)[[2]]
   
   # estimate credibility interval
-  rho_stde <- sqrt(rho_ve)
+  rho_stdr <- sqrt(rho_vr)
   level = 0.80
   zs <- -qnorm((1 - level)/2)
-  rho_lCV <- rho_rb - zs * rho_stde
-  rho_uCV <- rho_rb + zs * rho_stde
+  rho_lCV <- rho_rb - zs * rho_stdr
+  rho_uCV <- rho_rb + zs * rho_stdr
   
   out <- data.frame(n = n, k = k, 
                     rbar = x_rb, Var.rbar = x_vr, VarSE.rbar = x_ve, PerVarExp.rbar = x_pv, 
