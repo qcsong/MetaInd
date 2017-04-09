@@ -65,12 +65,13 @@ MetaSummary = function (x, correct_Rxx = TRUE, correct_Ryy = TRUE, correct_RR = 
   rho_uCV <- rho_rb + zs * rho_stdr
 
   out <- data.frame(n = n, k = k,
-                    rbar = x_rb, Var.rbar = x_vr, VarSE.rbar = x_ve, PerVarExp.rbar = x_pv,
+                    rbar = x_rb, Var.rbar = x_vr, VarSE.rbar = x_ve, 
                     LCL95.rbar = x_lCIhet, UCL95.rbar = x_uCIhet,
                     rho = rho_rb, Var.rho = rho_vr,
                     # PerVarExp.rho = rho_pv,
                     LCI95.rho = rho_lCI, UCL95.rho = rho_uCI,
-                    LCV80 = rho_lCV, UCV80 = rho_uCV)
+                    LCV80 = rho_lCV, UCV80 = rho_uCV,
+                    PerVarExp = x_pv)
   return(out)
 }
 
