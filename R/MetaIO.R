@@ -43,7 +43,7 @@ MetaSummary = function (x, correct_Rxx = TRUE, correct_Ryy = TRUE, correct_RR = 
   }
 
   rho_rb <- psychometric::rbar(x_c)
-  rho_vr <- psychometric::vare(x_c) # Var(rho) in Schmidt & Hunter 2014 (p.149)
+  rho_vr <- psychometric::varr(x_c) # Var(rho) in Schmidt & Hunter 2014 (p.149)
   # rho_pv <- pvse2(x_c)[1] # percent of variance due to sampling error
   # rho_lCIhet <- psychometric::CIrb(x_c, LEVEL = .95, homogenous = F)[1]
   # rho_uCIhet <- psychometric::CIrb(x_c, LEVEL = .95, homogenous = F)[2]
