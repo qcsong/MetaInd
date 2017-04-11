@@ -47,7 +47,8 @@ MetaSummary = function (x, correct_Rxx = TRUE, correct_Ryy = TRUE, correct_RR = 
   # rho_pv <- pvse2(x_c)[1] # percent of variance due to sampling error
   # rho_lCIhet <- psychometric::CIrb(x_c, LEVEL = .95, homogenous = F)[1]
   # rho_uCIhet <- psychometric::CIrb(x_c, LEVEL = .95, homogenous = F)[2]
-  rho_ve <- psychometric::varr(x_c) # Ave(ve) in Schmidt & Hunter 2014 (p.149)
+  # rho_ve <- psychometric::varr(x_c) # Ave(ve) in Schmidt & Hunter 2014 (p.149)
+  rho_ve <- (sqrt(rho_vr)/sqrt(k))^2
 
   # estimate confidence interval
   # Schmidt & Hunter (2015) p. 230
