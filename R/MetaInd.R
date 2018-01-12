@@ -1,4 +1,4 @@
-# MetaIO: Meta-Analysis Package for Industrial-Organizational Psychology (based on Schmidt & Hunter, 2014; artifacts corrected individually)
+# MetaInd: Meta-Analysis Package for Industrial-Organizational Psychology (based on Schmidt & Hunter, 2014; artifacts corrected individually)
 # Developer: Q. Chelsea Song
 # Contact: qianqisong@gmail.com
 # Last Update: 12/24/2017
