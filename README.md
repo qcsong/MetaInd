@@ -1,6 +1,6 @@
 # MetaInd 
 
-Meta-Analysis Package for Individual Correction of Reliability and Range Restriction <br /> 
+R Package for Conducting Meta-Analysis with Individual Correction of Reliability and Range Restriction <br /> 
 Developer: Chelsea Song <br /> 
 Contact: qianqisong@gmail.com <br /> 
 Last Update: 01/24/2017 <br /> 
