@@ -48,16 +48,16 @@ Summary table of meta-analytic results, consisting of:
 * *LCV80* - lower boundary of 80% credibility interval 
 * *UCV80* - upper boundary of 80% credibility interval
 
-### Citation ###
+## Citation ##
 
 If you use the package for publication, please refer to it using the following citation:
 Song, Q. C. (2017). MetaInd: A R Package for Conducting Meta-Analysis with Individual Correction of Reliability and Range Restriction. URL: https://github.com/qcsong/MetaInd
 
-#### Note ####
+### Note ###
 
 Package dependency: psychometric package
 
-#### References ####
+### References ###
 
 1. Schmidt, F. L., & Hunter, J. E. (2014). Methods of meta-analysis: Correcting error and bias in research findings. Sage publications.
 2. Hunter, J. E., Schmidt, F. L., & Le, H. (2006). Implications of direct and indirect range restriction for meta-analysis methods and findings. Journal of Applied Psychology, 91(3), 594.
