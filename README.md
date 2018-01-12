@@ -8,7 +8,7 @@ Last Update: 01/24/2017 <br />
 
 ## Objective ##
 
-The current R packages provides meta-analytic results using Hunter and Schmidt method (Schmidt & Hunter, 2014). Effect sizes are corrected for each individual effect size. Users can specify meta-analytic corrections for 
+The current R package provides meta-analytic estimates using Hunter and Schmidt (2014) method with independent correction for each individual effect size. Users can specify meta-analytic corrections for 
 1. Reliability of independent variable <br />
 2. Reliability of dependent variable <br />
 3. Direct and indirect range restriction (Hunter, Schmidty, & Le, 2006) <br /> 
