@@ -1,6 +1,6 @@
 # MetaInd 
 
-Conducts Hunter & Schmidt Meta-Analysis with Individual Artifact Correction <br /> 
+Meta-Analysis Package for Individual Correction of Reliability and Range Restriction <br /> 
 Developer: Chelsea Song <br /> 
 Contact: qianqisong@gmail.com <br /> 
 Last Update: 01/24/2017 <br /> 
