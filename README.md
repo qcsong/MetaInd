@@ -1,4 +1,4 @@
-# MetaIO 
+# MetaInd 
 
 Conducts Hunter & Schmidt Meta-Analysis with Individual Artifact Correction <br /> 
 Developer: Chelsea Song <br /> 
@@ -19,8 +19,8 @@ The current R packages provides meta-analytic results using Hunter and Schmidt m
 2. Install R package "ParetoR" through Github by pasting and running the following commands in R console or RStudio:
    install.packages("devtools") <br />
    library("devtools") <br />
-   install_github("qcsong/MetaIO") <br />
-   library("MetaIO") <br />
+   install_github("qcsong/MetaInd") <br />
+   library("MetaInd") <br />
 3. Import meta-analytic data. See dataset "ABHt32" for example: <br />
    data("ABHt32") <br />
 4. Obtain meta-analytic results in a summary table using function "MetaSummary". Example below: <br />
