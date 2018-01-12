@@ -51,7 +51,7 @@ Summary table of meta-analytic results, consisting of:
 ### Citation ###
 
 If you use the package for publication, please refer to it using the following citation: <br /><br />
-Song, Q. C. (2017). MetaInd: A R Package for Conducting Meta-Analysis with Individual Correction of Reliability and Range Restriction. URL: https://github.com/qcsong/MetaInd
+Song, Q. C. (2017). MetaInd: An R Package for Conducting Meta-Analysis with Individual Correction of Reliability and Range Restriction. URL: https://github.com/qcsong/MetaInd
 
 ### Note ###
 
