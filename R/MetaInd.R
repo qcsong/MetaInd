@@ -25,12 +25,13 @@ MetaSummary = function (x, correct_Rxx = TRUE, correct_Ryy = TRUE, correct_RR = 
   k <- length(unique(x[,'study']))
 
   ## obtain sample-weighted result ##
-  x_rb <- psychometric::rbar(x)
-  x_vr <- psychometric::varr(x)
-  x_ve <- psychometric::vare(x)
-  x_pv <- pvse2(x)[1] # percent of variance due to sampling error
-  x_lCIhet <- psychometric::CIrb(x, LEVEL = .95, homogenous = F)[1]
-  x_uCIhet <- psychometric::CIrb(x, LEVEL = .95, homogenous = F)[2]
+  x_b <- aggregate(x, by = list(x$study), FUN = mean, na.rm = T)
+  x_rb <- psychometric::rbar(x_b)
+  x_vr <- psychometric::varr(x_b)
+  x_ve <- psychometric::vare(x_b)
+  x_pv <- pvse2(x_b)[1]
+  x_lCIhet <- psychometric::CIrb(x_b, LEVEL = 0.95, homogenous = F)[1]
+  x_uCIhet <- psychometric::CIrb(x_b, LEVEL = 0.95, homogenous = F)[2]
 
   ## obtain corrected result ##
   x_c = x
@@ -41,7 +42,8 @@ MetaSummary = function (x, correct_Rxx = TRUE, correct_Ryy = TRUE, correct_RR = 
     if(correct_Rxx==TRUE){x_c = cRxx(x_c)}
     if(correct_Ryy==TRUE){x_c = cRyy(x_c)}
   }
-
+  
+  x_c <- aggregate(x_c, by = list(x_c$study), FUN = mean, na.rm = T)
   rho_rb <- psychometric::rbar(x_c)
   rho_vr <- psychometric::vare(x_c) # Var(rho) in Schmidt & Hunter 2014 (p.149)
   # rho_pv <- pvse2(x_c)[1] # percent of variance due to sampling error
