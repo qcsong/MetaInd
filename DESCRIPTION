@@ -1,6 +1,6 @@
 Package: MetaInd
 Type: Package
-Title: R Package for Conducting Meta-Analysis with Individual Correction of Reliability and Range Restriction
+Title: Meta-Analysis Estimates with Individual Correction of Reliability and Range Restriction
 Version: 0.1.0
 Authors@R: person("Q. Chelsea", "Song", email = "qianqisong@gmail.com", role = c("aut", "cre"))
 Description: Based on Schmidt and Hunter method (Schmidt & Hunter, 2014).
