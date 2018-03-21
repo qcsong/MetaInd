@@ -1,7 +1,7 @@
 # MetaInd: Meta-Analysis Package for Industrial-Organizational Psychology (based on Schmidt & Hunter, 2014; artifacts corrected individually)
 # Developer: Q. Chelsea Song
 # Contact: qianqisong@gmail.com
-# Last Update: 12/24/2017
+# Last Update: 03/20/2018
 
 ##### MetaSummary #####
 
@@ -100,7 +100,7 @@ function (x)
     }
     cRxy <- x[, "Rxy"]/aRxx
     out <- x
-    out[, "Rxy"] <- round(cRxy, 3)
+    out[, "Rxy"] <- cRxy
     return(out)
 }
 
@@ -126,7 +126,7 @@ cRyy <- function (x)
   }
   cRxy <- x[,'Rxy']/aRyy
   out <- x
-  out[,'Rxy'] <- round(cRxy,3)
+  out[,'Rxy'] <- cRxy
   return(out)
 }
 
@@ -234,7 +234,7 @@ cRRn <- function(x, correct_Rxx = TRUE, direct = TRUE)
 
   # output
   out <- x
-  out[,'Rxy'] <- round(cRxy,3)
+  out[,'Rxy'] <- cRxy
   return(out)
 
 }
