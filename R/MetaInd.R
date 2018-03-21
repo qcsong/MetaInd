@@ -154,7 +154,14 @@ cRRn <- function(x, correct_Rxx = TRUE, direct = TRUE)
 
     # 1. Purpose: Correct for measurement error in Y
     # correlation between X and P in the restricted population: r_XPi
-    r_XPi = x[,'Rxy']/x[,'Ryy']
+    Rxy = x[,'Rxy']
+    Ryy = x[,'Ryy']
+    if(length(is.na(Ryy))==0){
+      Ryy=1
+    }else{
+      Ryy[is.na(Ryy)] = mean(Ryy, na.rm=T)
+    }
+    r_XPi = Rxy/Ryy
 
     # 2. Purpose: Correct for the effect of direct range restriction on X
     if (n == 0) {
@@ -172,7 +179,13 @@ cRRn <- function(x, correct_Rxx = TRUE, direct = TRUE)
     if(correct_Rxx==TRUE){
       # 3. Correct for measurement error in X
       # reliability of X in the unrestricted population: r_XXa
-      r_XXa <- 1 - u^2*(1-x[,'Rxx'])
+      Rxx = x[,'Rxx']
+      if(length(is.na(Rxx))==0){
+        Rxx = 1
+      }else{
+        Rxx[is.na(Rxx)] = mean(Rxx, na.rm=T)
+      }
+      r_XXa <- 1 - u^2*(1-Rxx)
       # correlation between T and P in the unrestricted population: cRxy
       cRxy <- r_XPa/sqrt(r_XXa) # operational validity of measure X
     }else{
@@ -185,8 +198,11 @@ cRRn <- function(x, correct_Rxx = TRUE, direct = TRUE)
   if(direct == FALSE){
 
     n <- length(x$u[!(is.na(x$u))])
+    Rxy = x[,'Rxy']
+    Rxx = x[,'Rxx']
+    Ryy = x[,'Ryy']
     if (n == 0) {
-      cRxy = x[,'Rxy']
+      cRxy = Rxy
     }
     else {
       u <- x$u
@@ -194,11 +210,21 @@ cRRn <- function(x, correct_Rxx = TRUE, direct = TRUE)
 
       # 1. Purpose: Correct for measurement error in Y
       # correlation between X and P in the restricted population: r_XPi
-      r_XPi = x[,'Rxy']/x[,'Ryy']
+      if(length(is.na(Ryy))==0){
+        Ryy = 1
+      }else{
+        Ryy[is.na(Ryy)] = mean(Ryy, na.rm=T)
+      }
+      r_XPi = Rxy/Ryy
 
       # 2. Purpose: Obtain reliability of X in the restricted population
       # reliability of X in the restricted population: r_XXi
-      r_XXi = x[,'Rxx']
+      if(length(is.na(Rxx))==0){
+        Rxx = 1
+      }else{
+        Rxx[is.na(Rxx)] = mean(Rxx, na.rm=T)
+      }
+      r_XXi = Rxx
 
       # 3. Purpose: Correct for measurement error in X
       # correlation between T and P in the restricted population: r_TPi
