@@ -87,7 +87,6 @@ MetaSummary = function (x, correct_Rxx = TRUE, correct_Ryy = TRUE, correct_RR = 
 #' @return Meta-analytic data corrected for independent variable reliability
 #' @export
 cRxx <- function (x)
-function (x) 
 {
     Rxx <- x$Rxx
     n <- length(Rxx[!(is.na(Rxx))])
