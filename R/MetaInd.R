@@ -87,19 +87,21 @@ MetaSummary = function (x, correct_Rxx = TRUE, correct_Ryy = TRUE, correct_RR = 
 #' @return Meta-analytic data corrected for independent variable reliability
 #' @export
 cRxx <- function (x)
+function (x) 
 {
-  Rxx <- x$Rxx
-  n <- length(x$Rxx[!(is.na(x$Rxx))])
-  if (n == 0) {
-    aRxx <- 1
-  }
-  else {
-    aRxx <- sqrt(Rxx)
-  }
-  cRxy <- x[,'Rxy']/aRxx
-  out <- x
-  out[,'Rxy'] <- round(cRxy,3)
-  return(out)
+    Rxx <- x$Rxx
+    n <- length(Rxx[!(is.na(Rxx))])
+    if (n == 0) {
+        aRxx <- 1
+    }
+    else {
+        Rxx[is.na(Rxx)] = mean(Rxx, na.rm=T)
+        aRxx <- sqrt(Rxx)
+    }
+    cRxy <- x[, "Rxy"]/aRxx
+    out <- x
+    out[, "Rxy"] <- round(cRxy, 3)
+    return(out)
 }
 
 ##### cRyy #####
@@ -114,11 +116,12 @@ cRxx <- function (x)
 cRyy <- function (x)
 {
   Ryy <- x$Ryy
-  n <- length(x$Ryy[!(is.na(x$Ryy))])
+  n <- length(Ryy[!(is.na(Ryy))])
   if (n == 0) {
     aRyy <- 1
   }
   else {
+    Ryy[is.na(Ryy)] = mean(Ryy,na.rm=T)
     aRyy <- sqrt(Ryy)
   }
   cRxy <- x[,'Rxy']/aRyy
@@ -160,6 +163,7 @@ cRRn <- function(x, correct_Rxx = TRUE, direct = TRUE)
     }
     else {
       # attenuation factor for direct range restriction
+      u[is.na(u)] = mean(u,na.rm=T)
       aRR <- sqrt((1 - u^2) * r_XPi^2 + u^2)
     }
     # correlation between T and P in the unrestricted population: r_XPa
@@ -186,8 +190,8 @@ cRRn <- function(x, correct_Rxx = TRUE, direct = TRUE)
       cRxy = x[,'Rxy']
     }
     else {
-
       u <- x$u
+      u[is.na(u)] = mean(u,na.rm=T)
 
       # 1. Purpose: Correct for measurement error in Y
       # correlation between X and P in the restricted population: r_XPi
